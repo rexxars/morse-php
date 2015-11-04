@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true"
+  bootstrap="vendor/autoload.php">
+  <testsuites>
+    <testsuite name="morse-php test suite">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+
+  <logging>
+    <log type="coverage-html" target="build/coverage" title="Code coverage for morse-php" charset="UTF-8" yui="true" highlight="true" />
+    <log type="coverage-clover" target="build/logs/clover.xml" />
+    <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false" />
+    <log type="testdox-html" target="build/logs/testdox.html" />
+    <log type="testdox-text" target="build/logs/testdox.txt" />
+  </logging>
+
+  <filter>
+    <whitelist addUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">library</directory>
+    </whitelist>
+  </filter>
+</phpunit>

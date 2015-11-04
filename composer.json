@@ -1,0 +1,21 @@
+{
+    "name": "rexxars/morse",
+    "description": "Generate morse code (text and/or wav-audio)",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Espen Hovlandsdal",
+            "email": "espen@hovlandsdal.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^4.8.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Morse\\": "library/"
+        }
+    }
+}
