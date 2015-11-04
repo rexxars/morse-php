@@ -25,7 +25,7 @@ class Wav {
     private $phase  = 0;
     private $dPhase = 0;
 
-    private $bytes = array();
+    private $bytes = [];
 
     public function __construct($table = null) {
         $this->timingCodes = $table ? $table : new Table();
@@ -204,11 +204,11 @@ class Wav {
     }
 
     private function reset() {
-        $this->bytes = array(
+        $this->bytes = [
             self::DIT => '',
             self::DAH => '',
             self::SPC => ''
-        );
+        ];
 
         $this->data = null;
     }

@@ -71,7 +71,7 @@ class Text {
     public function toMorse($text) {
         $text = strtoupper($text);
         $words = preg_split('#\s+#', $text);
-        $morse = array_map(array($this, 'morseWord'), $words);
+        $morse = array_map([$this, 'morseWord'], $words);
         return implode($this->wordSeparator, $morse);
     }
 
@@ -84,7 +84,7 @@ class Text {
     public function fromMorse($morse) {
         $morse = str_replace($this->invalidCharacterReplacement . ' ', '', $morse);
         $words = explode($this->wordSeparator, $morse);
-        $morse = array_map(array($this, 'translateMorseWord'), $words);
+        $morse = array_map([$this, 'translateMorseWord'], $words);
         return implode(' ', $morse);
     }
 
@@ -96,7 +96,7 @@ class Text {
      */
     private function translateMorseWord($morse) {
         $morseChars = explode(' ', $morse);
-        $characters = array_map(array($this, 'translateMorseCharacter'), $morseChars);
+        $characters = array_map([$this, 'translateMorseCharacter'], $morseChars);
         return implode('', $characters);
     }
 
@@ -118,7 +118,7 @@ class Text {
      */
     private function morseWord($word) {
         $chars = $this->strSplit($word);
-        $morse = array_map(array($this, 'morseCharacter'), $chars);
+        $morse = array_map([$this, 'morseCharacter'], $chars);
         return implode(' ', $morse);
     }
 

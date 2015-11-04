@@ -29,7 +29,7 @@ class Table implements \ArrayAccess {
      *
      * @var array
      */
-    private $table = array(
+    private $table = [
         'A' => '01',
         'B' => '1000',
         'C' => '1010',
@@ -86,7 +86,7 @@ class Table implements \ArrayAccess {
         '"' => '010010',
         '$' => '0001001',
         '@' => '011010',
-    );
+    ];
 
     /**
      * Constructs a new instance of the table
